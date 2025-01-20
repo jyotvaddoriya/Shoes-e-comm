@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/add', async (req, res) => {
     try {
         const { name, price, quantity, imageUrl, userId } = req.body;
-
+                        
         if (!imageUrl) {
             return res.status(400).json({ message: 'Image URL is required' });
         }
